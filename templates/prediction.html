@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+<title>IoT Devices Anomaly Detection</title>
+
+<!-- CSS  -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<link href="./static/css2/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+<nav class="light-blue lighten-1" role="navigation">
+<div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Anomoly Detection in IoT Devices</a>
+    <ul class="right hide-on-med-and-down">
+    <li><a href="/">Home</a></li>
+    </ul>
+
+    <ul id="nav-mobile" class="sidenav">
+    <li><a href="/">Home</a></li>
+    </ul>
+    <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+</div>
+</nav>
+
+
+<div class="section no-pad-bot" id="index-banner">
+<div class="container">
+    <br><br>
+    <h1 class="header center light-blue-text">IoT Devices Anomoly Detection</h1>
+    <div class="row center">
+    <h5 class="header col s12 light">Predict the probability of Anomoly Occurence
+    <br>
+    </h5>
+</div>
+
+            <div class="row">
+<form action='/predict' method="post" class="col s12">
+    <div class="row">
+    <div class="input-field col s4">
+        <label for="sourceID"><b>Source ID</b></label>
+        <br>
+        <input placeholder="sourceID" name="sourceID" id="sourceID" type="text" class="validate">
+    </div>
+    <div class="input-field col s4">
+
+        <label for="sourceAddress"><b>Source Address </b></label>
+        <br>
+        <input id="sourceAddress" name="sourceAddress" placeholder="sourceAddress"  type="text" class="validate">
+
+    </div>
+
+    <div class="input-field col s4">
+        <label for="sourceType"><b>Source Type</b></label>
+        <br>
+        <input id="sourceType" name="sourceType" placeholder="sourceType" type="text" class="validate">
+
+    </div>
+    <div class="input-field col s4">
+        <label for="sourceLocation"><b>Source Location</b></label>
+        <br>
+        <input id="sourceLocation" name="sourceLocation" placeholder="sourceLocation" type="text" class="validate">
+
+    </div>
+    <div class="input-field col s4">
+        <label for="destinationServiceAddress"><b>Destination Service Address</b></label>
+        <br>
+        <input id="destinationServiceAddress" name="destinationServiceAddress" placeholder="destinationServiceAddress" type="text" class="validate">
+
+    </div>
+    <div class="input-field col s4">
+        <label for="destinationServiceType"><b>Destination Service Type</b></label>
+        <br>
+        <input id="destinationServiceType" name="destinationServiceType" placeholder="destinationServiceType" type="text" class="validate">
+
+    </div>
+    <div class="input-field col s4">
+        <label for="destinationLocation"><b>Destination Location</b></label>
+        <br>
+        <input id="destinationLocation" name="destinationLocation" placeholder="destinationLocation" type="text" class="validate">
+
+    </div>
+    <div class="input-field col s4">
+        <label for="accessedNodeAddress"><b>Accessed Node Address</b></label>
+        <br>
+        <input id="accessedNodeAddress" name="accessedNodeAddress" placeholder="accessedNodeAddress" type="text" class="validate">
+
+    </div>
+    <div class="input-field col s4">
+        <label for="accessedNodeType"><b>Accessed Node Type</b></label>
+        <br>
+        <input id="accessedNodeType" name="accessedNodeType" placeholder="accessedNodeType" type="text" class="validate">
+
+    </div>
+    <div class="input-field col s4">
+        <label for="operation"><b>Operation</b></label>
+        <br>
+        <input id="operation" name="operation" placeholder="operation" type="text" class="validate">
+
+    </div>
+    <div class="input-field col s4">
+        <label for="value"><b>Value</b></label>
+        <br>
+        <input id="value" name="value" placeholder="value" type="text" class="validate">
+
+    </div>
+
+    </div>
+
+    <div class="row center">
+
+        <button type="submit" class="btn-large waves-effect waves-light light-blue">Predict Probability</button>
+    </div>
+</form>
+    </div>
+
+    <br>
+    <!-- <p>['anomalous(DoSattack)', 'anomalous(dataProbing)','anomalous(malitiousControl)', 'anomalous(malitiousOperation)','anomalous(scan)', 'anomalous(spying)', 'anomalous(wrongSetUp)','normal']</p> -->
+    {{pred}}
+    <br>
+    {{bhai}}
+    <br>
+
+</div>
+</div>
+
+
+<br><br>
+</div>
+</div>
+<footer class="page-footer light-blue">
+<div class="container">
+  <div class="row">
+    <div class="col l6 s12">
+      <h5 class="white-text">Our Bio</h5>
+      <p class="grey-text text-lighten-4">We are a team of college students working on this project as our final year project. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+    </div>
+   
+  </div>
+</div>
+<div class="footer-copyright">
+  <div class="container">
+  Made by <a class="white-text text-lighten-3" href="#">Praveen Kumar , Piyush Rathore , Mayank Goyal</a>
+  </div>
+</div>
+</footer>
+
+
+<!--  Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src=".js/materialize.js"></script>
+<script src="js/init.js"></script>
+
+</body>
+</html>
